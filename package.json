@@ -1,21 +1,20 @@
 {
   "name": "pari-ui",
-  "version": "0.1.0",
+  "version": "0.3.2",
   "description": "Pari Ui For React",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist",
-    "README.md",
-    "index.d.ts"
+    "README.md"
   ],
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "typings": "index.d.ts",
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/parisaaghaii/pari-ui.git"

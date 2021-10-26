@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./styles/Select.css";
+import "./Select.css";
 
 function Select() {
   const [myCar, setMyCar] = useState("Select Your Car:");

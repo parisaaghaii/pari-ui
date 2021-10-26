@@ -1,5 +1,10 @@
 import React from "react";
-import "./styles/Button.css";
+import "./Button.css";
+/**
+ * 
+ * @param {String} kind [primary | default]
+ * @returns 
+ */
 const Button = (props) => {
   return (
     <button
@@ -12,6 +17,7 @@ const Button = (props) => {
       onClick={props.handleClick}
     >
       <h4>{props.label}</h4>
+      {props.children}
     </button>
   );
 };
