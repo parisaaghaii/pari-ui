@@ -10,8 +10,8 @@ npm i pari-ui
 
 - [x] button
 
-- [ ] input
+- [x] input
 
-- [ ] select
+- [x] select
 
   
