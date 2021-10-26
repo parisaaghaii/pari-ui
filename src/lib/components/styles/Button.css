@@ -1,0 +1,15 @@
+.btn {
+  all: unset;
+  padding: 2px 20px;
+  border-radius: 5px;
+  line-height: 0;
+  font-size: 14px;
+}
+.btn--primary {
+  background-image: linear-gradient(3deg, rgb(14, 95, 177), rgb(53, 154, 255));
+  color: #fff;
+}
+.btn--primary:hover {
+  background-image: linear-gradient(3deg, rgb(23, 89, 156), rgb(5, 119, 233));
+  color: #fff;
+}
