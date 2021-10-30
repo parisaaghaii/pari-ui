@@ -1,10 +1,10 @@
 import * as React from "react";
-export interface ButtonProps {
-  type?: "default" | "primary";
-  label?: string;
+export interface InputProps {
+  type?: "default" | "string";
+  placeholder?: string;
   children?: React.ReactNode;
 }
-declare const Button: React.ForwardRefExoticComponent<
-  ButtonProps & React.RefAttributes<unknown>
+declare const Input: React.ForwardRefExoticComponent<
+  InputProps & React.RefAttributes<unknown>
 >;
-export default Button;
+export default Input;

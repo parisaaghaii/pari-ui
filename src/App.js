@@ -1,14 +1,14 @@
+import React, { useState } from "react";
 import { Button, Input, Select } from "./lib";
 import "./App.css";
 
 function App() {
+  const [value, setValue] = useState("")
   return (
     <div className="page">
       <fieldset>
         <legend>Button</legend>
-        <Button label="123654" kind="primary">
-          456465
-        </Button>
+        <Button label="RUN" kind="primary"></Button>
 
         <Button>Test</Button>
       </fieldset>
@@ -16,8 +16,8 @@ function App() {
       <fieldset>
         <legend>Input</legend>
         <Input
-          type="number"
-          placeholder={"1213132"}
+          type="string"
+          placeholder={"Type "}
           onChange={(e) => console.log(e.target.value)}
         >
           dfsdfsdf
@@ -26,7 +26,15 @@ function App() {
 
       <fieldset>
         <legend>Select</legend>
-        <Select />
+        <Select
+          list={["sara", "fateme"]}
+          placeholder="names list :"
+          selector={value}
+          onChange={(e) => setValue(e.target.value)}
+        >
+          <option value={"javad1"}>javad1</option>
+          <option value={"javad2"}>javad2</option>
+        </Select>
       </fieldset>
     </div>
   );

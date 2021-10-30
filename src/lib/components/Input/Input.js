@@ -1,6 +1,8 @@
 import React from "react";
 import "./Input.css";
 
+
+
 const Input = ({
   type = "text",
   onChange = () => {},

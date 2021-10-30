@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Select.css";
 
-function Select() {
+function Select({ list = [], placeholder = "", selector = "", onChange=()=>{}, children=undefined }) {
   const [myCar, setMyCar] = useState("Select Your Car:");
 
   const cars = (event) => {
@@ -10,12 +10,24 @@ function Select() {
   };
   return (
     <form className="formDes">
-      <select className="selDesign" value={myCar} onChange={cars}>
-        <option value="select Your Car:">Select Your Car:</option>
-        <option value="peykan">peykan</option>
-        <option value="peraid">perid</option>
-        <option value="206">206</option>
-        <option value="pershia">pershia</option>
+      <select
+        className="selDesign"
+        value={selector}
+        onChange={onChange}
+      >
+        {!selector && (
+          <option key={"namelist"} value={""}>
+            {placeholder}
+          </option>
+        )}
+        {list.map((item, index) => {
+          return (
+            <option key={index} value={item}>
+              {item}
+            </option>
+          );
+        })}
+        {children}
       </select>
     </form>
   );
