@@ -29,7 +29,7 @@ function App() {
         <Select
           list={["sara", "fateme"]}
           placeholder="names list :"
-          selector={value}
+          selected={value}
           onChange={(e) => setValue(e.target.value)}
         >
           <option value={"javad1"}>javad1</option>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Select.css";
 
-function Select({ list = [], placeholder = "", selector = "", onChange=()=>{}, children=undefined }) {
+function Select({ list = [], placeholder = "", selected = "", onChange=()=>{}, children=undefined }) {
   const [myCar, setMyCar] = useState("Select Your Car:");
 
   const cars = (event) => {
@@ -12,10 +12,10 @@ function Select({ list = [], placeholder = "", selector = "", onChange=()=>{}, c
     <form className="formDes">
       <select
         className="selDesign"
-        value={selector}
+        value={selected}
         onChange={onChange}
       >
-        {!selector && (
+        {!selected && (
           <option key={"namelist"} value={""}>
             {placeholder}
           </option>
