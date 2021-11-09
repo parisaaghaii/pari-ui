@@ -1,17 +1,18 @@
 import React from "react";
-import { useState } from "react";
 import "./Select.css";
 
-function Select({ list = [], placeholder = "", selected = "", onChange=()=>{}, children=undefined }) {
-  const [myCar, setMyCar] = useState("Select Your Car:");
-
-  const cars = (event) => {
-    setMyCar(event.target.value);
-  };
+function Select({
+  list = [],
+  placeholder = "",
+  selected = "",
+  onChange = () => {},
+  children = undefined,
+  classNameSelecttext = "",
+}) {
   return (
-    <form className="formDes">
+    <form className="formDes " >
       <select
-        className="selDesign"
+        className={`selDesign ${classNameSelecttext}`}
         value={selected}
         onChange={onChange}
       >

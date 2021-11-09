@@ -7,10 +7,12 @@ const Input = ({
   type = "text",
   onChange = () => {},
   onKeyDown = () => {},
-  placeholder=undefined}) => {
+  placeholder = undefined,
+classNameinput = "",
+}) => {
   return (
     <input
-      className="inpDes"
+      className={`inpDes ${classNameinput}`}
       onChange={onChange}
       onKeyDown={onKeyDown}
       type={type}

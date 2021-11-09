@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button, Input, Select } from "./lib";
 import "./App.css";
 
-function App() {
-  const [value, setValue] = useState("")
+function App(buttonclassName = "" , inputclassName= "" , ) {
+  const [value, setValue] = useState("");
   return (
     <div className="page">
       <fieldset>
